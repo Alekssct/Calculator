@@ -55,16 +55,16 @@ public class CalculatorEngine implements ActionListener {
 			// От выбора арифметического действия показываем результат
 			if (selectedAction == '+') {
 				currentResult += displayValue;
-				parent.displayField.setText("" + currentResult);
+				parent.displayField.setText("" + Math.ceil(currentResult * 1000000000)/1000000000);
 			} else if (selectedAction == '-') {
 				currentResult -= displayValue;
-				parent.displayField.setText("" + currentResult);
+				parent.displayField.setText("" + Math.ceil(currentResult * 1000000000)/1000000000);
 			} else if (selectedAction == '*') {
 				currentResult *= displayValue;
-				parent.displayField.setText("" + currentResult);
+				parent.displayField.setText("" + Math.ceil(currentResult * 1000000000)/1000000000);
 			} else if (selectedAction == '/') {
 				currentResult /= displayValue;
-				parent.displayField.setText("" + currentResult);
+				parent.displayField.setText("" + Math.ceil(currentResult * 1000000000)/1000000000);
 			}
 		// Сброс результата	
 		} else if (src == parent.buttonReset) {
